@@ -1,0 +1,80 @@
+html, body, section, article, div, nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 100;
+}
+
+a {
+  color: #a31f1f;
+}
+
+p, a {
+  font-size: 1.5em;
+  text-decoration: none;
+}
+nav p, nav a {
+  color: #fff;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+}
+section.hero {
+  max-height: 47em;
+  padding: 4em 0 0 0;
+  background: rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+  position: relative;
+}
+section.hero .background {
+  width: 100%;
+  height: 100%;
+  background: url("imgs/kahvipavut.jpg") no-repeat;
+  z-index: -1;
+  top: 0;
+  position: absolute;
+}
+section.hero article {
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+  display: block;
+}
+section.hero img {
+  margin: 0 auto;
+  display: block;
+}
+
+article {
+  max-width: 80em;
+  width: 100%;
+}
+
+.navbar {
+  width: 100%;
+  height: 4em;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}

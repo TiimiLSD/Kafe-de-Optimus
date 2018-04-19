@@ -1,0 +1,66 @@
+$COLOR_ACCENT: #a31f1f !default;
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 100;
+}
+
+a {
+  color: $COLOR_ACCENT;
+}
+
+p, a {
+  font-size: 1.5em;
+  text-decoration: none;
+  nav & {
+    color: #fff;
+  }
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  &.hero {
+    max-height: 47em;
+    padding: 4em 0 0 0;
+    background: rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+    position: relative;
+    & .background {
+      width: 100%;
+      height: 100%;
+      background: url("imgs/kahvipavut.jpg") no-repeat;
+      z-index: -1;
+      top: 0;
+      position: absolute;
+    }
+    & article {
+      text-align: center;
+      color: #fff;
+      margin: 0 auto;
+      display: block;
+    }
+    & img {
+      margin: 0 auto;
+      display: block;
+    }
+  }
+}
+
+article {
+  max-width: 80em;
+  width: 100%;
+}
