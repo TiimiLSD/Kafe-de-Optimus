@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3.5em;
   font-weight: 100;
 }
 
@@ -28,16 +28,29 @@ a {
 }
 
 p, a {
-  font-size: 1.5em;
+  font-size: 2em;
   text-decoration: none;
 }
 nav p, nav a {
   color: #fff;
 }
 
+h1 b {
+  font-weight: 400;
+}
+p b {
+  font-weight: 600;
+}
+
 section {
   width: 100%;
-  height: 100%;
+}
+section.text-center {
+  text-align: center;
+}
+section article {
+  margin: 0 auto;
+  display: block;
 }
 section.hero {
   max-height: 47em;
@@ -50,6 +63,7 @@ section.hero .background {
   width: 100%;
   height: 100%;
   background: url("imgs/kahvipavut.jpg") no-repeat;
+  background-size: cover;
   z-index: -1;
   top: 0;
   position: absolute;
@@ -57,8 +71,6 @@ section.hero .background {
 section.hero article {
   text-align: center;
   color: #fff;
-  margin: 0 auto;
-  display: block;
 }
 section.hero img {
   margin: 0 auto;
@@ -70,11 +82,59 @@ article {
   width: 100%;
 }
 
-.navbar {
+.product-card {
+  width: calc(40em - 1em);
+  height: 25em;
+  border-radius: 1em;
+  box-sizing: border-box;
+  padding: 1.5em;
+  margin: .5em auto;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+.product-card-container {
+  flex: 1 0 50%;
+}
+.product-card-container:nth-of-type(1) {
+  flex: 0 1 100%;
+}
+.product-card-flex {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-around;
+}
+.product-card h1 {
+  margin: 0;
+}
+.product-card#gold {
+  background: GOLD;
+}
+.product-card#green {
+  background: GREEN;
+}
+.product-card#original {
+  background: #999;
+}
+
+.nav {
   width: 100%;
   height: 4em;
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   z-index: 3;
+  padding: 0 1em;
+  box-sizing: border-box;
+}
+.nav-link-container {
+  display: inline;
+  float: left;
+}
+.nav-link-container > * {
+  display: inline;
+}
+.nav-link-container + .nav-link-container {
+  float: right;
+}
+.nav-link-container a + a {
+  margin-left: .25em;
 }

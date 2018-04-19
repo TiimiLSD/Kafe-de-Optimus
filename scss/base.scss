@@ -1,5 +1,9 @@
 $COLOR_ACCENT: #a31f1f !default;
 
+$BG_ORIGINAL: #999 !default;
+$BG_GREEN: GREEN !default;
+$BG_GOLD: GOLD !default;
+
 html, body {
   width: 100%;
   height: 100%;
@@ -14,7 +18,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3.5em;
   font-weight: 100;
 }
 
@@ -23,16 +27,31 @@ a {
 }
 
 p, a {
-  font-size: 1.5em;
+  font-size: 2em;
   text-decoration: none;
   nav & {
     color: #fff;
   }
 }
 
+b {
+  h1 & {
+    font-weight: 400;
+  }
+  p & {
+    font-weight: 600;
+  }
+}
+
 section {
   width: 100%;
-  height: 100%;
+  &.text-center {
+    text-align: center;
+  }
+  & article {
+    margin: 0 auto;
+    display: block;
+  }
   &.hero {
     max-height: 47em;
     padding: 4em 0 0 0;
@@ -43,6 +62,7 @@ section {
       width: 100%;
       height: 100%;
       background: url("imgs/kahvipavut.jpg") no-repeat;
+      background-size: cover;
       z-index: -1;
       top: 0;
       position: absolute;
@@ -50,8 +70,6 @@ section {
     & article {
       text-align: center;
       color: #fff;
-      margin: 0 auto;
-      display: block;
     }
     & img {
       margin: 0 auto;
@@ -63,4 +81,37 @@ section {
 article {
   max-width: 80em;
   width: 100%;
+}
+
+.product-card {
+  width: calc(40em - 1em);
+  height: 25em;
+  border-radius: 1em;
+  box-sizing: border-box;
+  padding: 1.5em;
+  margin: .5em auto;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  &-container {
+    flex: 1 0 50%;
+    &:nth-of-type(1){
+      flex: 0 1 100%;
+    }
+  }
+  &-flex {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;
+  }
+  & h1 {
+    margin: 0;
+  }
+  &#gold {
+    background: $BG_GOLD;
+  }
+  &#green {
+    background: $BG_GREEN;
+  }
+  &#original {
+    background: $BG_ORIGINAL;
+  }
 }
