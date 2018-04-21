@@ -1,8 +1,12 @@
 $COLOR_ACCENT: #a31f1f !default;
 
-$BG_ORIGINAL: #999 !default;
-$BG_GREEN: GREEN !default;
-$BG_GOLD: GOLD !default;
+$ORIGINAL: #ded4de;
+$GREEN: #bcf5a1;
+$GOLD: #fef162;
+
+$BG_ORIGINAL: linear-gradient(to bottom, lighten($ORIGINAL, 15%) 0%, $ORIGINAL) !default;
+$BG_GREEN: linear-gradient(to bottom, lighten($GREEN, 15%) 0%, $GREEN) !default;
+$BG_GOLD: linear-gradient(to bottom, lighten($GOLD, 15%) 0%, $GOLD) !default;
 
 html, body {
   width: 100%;
@@ -81,37 +85,4 @@ section {
 article {
   max-width: 80em;
   width: 100%;
-}
-
-.product-card {
-  width: calc(40em - 1em);
-  height: 25em;
-  border-radius: 1em;
-  box-sizing: border-box;
-  padding: 1.5em;
-  margin: .5em auto;
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
-  &-container {
-    flex: 1 0 50%;
-    &:nth-of-type(1){
-      flex: 0 1 100%;
-    }
-  }
-  &-flex {
-    display: flex;
-    flex-flow: row wrap;
-    align-content: space-around;
-  }
-  & h1 {
-    margin: 0;
-  }
-  &#gold {
-    background: $BG_GOLD;
-  }
-  &#green {
-    background: $BG_GREEN;
-  }
-  &#original {
-    background: $BG_ORIGINAL;
-  }
 }

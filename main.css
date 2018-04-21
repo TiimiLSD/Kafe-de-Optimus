@@ -1,4 +1,4 @@
-html, body, section, article, div, nav {
+html, body, section, article, div, nav, input, textarea, button {
   margin: 0;
   padding: 0;
   border: 0;
@@ -82,39 +82,6 @@ article {
   width: 100%;
 }
 
-.product-card {
-  width: calc(40em - 1em);
-  height: 25em;
-  border-radius: 1em;
-  box-sizing: border-box;
-  padding: 1.5em;
-  margin: .5em auto;
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
-}
-.product-card-container {
-  flex: 1 0 50%;
-}
-.product-card-container:nth-of-type(1) {
-  flex: 0 1 100%;
-}
-.product-card-flex {
-  display: flex;
-  flex-flow: row wrap;
-  align-content: space-around;
-}
-.product-card h1 {
-  margin: 0;
-}
-.product-card#gold {
-  background: GOLD;
-}
-.product-card#green {
-  background: GREEN;
-}
-.product-card#original {
-  background: #999;
-}
-
 .nav {
   width: 100%;
   height: 4em;
@@ -137,4 +104,131 @@ article {
 }
 .nav-link-container a + a {
   margin-left: .25em;
+}
+
+.product-card {
+  width: calc(40em - 1em);
+  height: 25em;
+  border-radius: 1em;
+  box-sizing: border-box;
+  padding: 1.5em;
+  margin: .5em auto;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-around;
+}
+.product-card-container {
+  flex: 1 0 50%;
+}
+.product-card-container:nth-of-type(1) {
+  flex: 0 1 100%;
+}
+.product-card-flex {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-around;
+}
+.product-card-img {
+  height: 100%;
+  left: -1.875em;
+  position: absolute;
+}
+.product-card-img-container {
+  height: 15em;
+  flex: 1 0 15em;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1em;
+}
+.product-card-heading {
+  flex: 0 1 100%;
+}
+.product-card-desc {
+  flex: 1 0 50%;
+  position: relative;
+}
+.product-card-desc a {
+  font-size: 1.4em;
+  padding: .25em .5em;
+  margin: 1rem;
+  background: rgba(0, 0, 0, 0.25);
+  transition: background .25s, transform .25s, box-shadow .25s;
+  border-radius: .5em;
+  color: #fff;
+  font-weight: 100;
+  position: absolute;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  bottom: -1rem;
+  left: 25%;
+}
+.product-card-desc a:hover {
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.075);
+}
+.product-card h1 {
+  margin: 0;
+}
+.product-card p {
+  font-size: 1.5em;
+  margin: 1rem;
+}
+.product-card#gold {
+  background: linear-gradient(to bottom, #fef8ae 0%, #fef162);
+}
+.product-card#green {
+  background: linear-gradient(to bottom, #edfce6 0%, #bcf5a1);
+}
+.product-card#original {
+  background: linear-gradient(to bottom, white 0%, #ded4de);
+}
+
+.contact-form {
+  display: flex;
+  flex-flow: row wrap;
+}
+.contact-form input, .contact-form textarea, .contact-form button {
+  margin: .5em 0;
+  padding: .5em;
+  border: 0;
+  color: #b1b1b1;
+  background: #ebebeb;
+  font-size: 1.5em;
+  border-radius: .25em;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  transition: transform .25s, box-shadow .25s, background .25s, border-color .25s;
+  border: 1px #ebebeb solid;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+  transform: scale(1.005);
+  border-color: #dedede;
+  background: #ededed;
+}
+.contact-form [value="Name"] {
+  flex: 1 0 calc(50% - 1em);
+  margin: auto 1em auto auto;
+}
+.contact-form [value="Email"] {
+  flex: 1 0 calc(50% - 1em);
+}
+.contact-form [value="Phone Number"] {
+  flex: 0 1 100%;
+}
+.contact-form [value="Message"] {
+  flex: 0 1 100%;
+}
+.contact-form button {
+  background: #606060;
+  color: #fff;
+  padding: .5em 2em;
+  font-weight: 100;
+}
+.contact-form button:hover {
+  background: #808080;
+  cursor: pointer;
+  transform: scale(1.05);
 }

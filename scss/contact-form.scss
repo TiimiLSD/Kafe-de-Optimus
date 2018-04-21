@@ -1,0 +1,47 @@
+.contact-form {
+  display: flex;
+  flex-flow: row wrap;
+  & input, textarea, button {
+    margin: .5em 0;
+    padding: .5em;
+    border: 0;
+    color: #b1b1b1;
+    background: #ebebeb;
+    font-size: 1.5em;
+    border-radius: .25em;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    transition: transform .25s, box-shadow .25s, background .25s, border-color .25s;
+    border: 1px #ebebeb solid;
+  }
+  & input:focus, textarea:focus {
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+    transform: scale(1.005);
+    border-color: #dedede;
+    background: #ededed;
+  }
+  & [value="Name"] {
+    flex: 1 0 calc(50% - 1em);
+    margin: auto 1em auto auto;
+  }
+  & [value="Email"] {
+    flex: 1 0 calc(50% - 1em);
+  }
+  & [value="Phone Number"] {
+    flex: 0 1 100%;
+  }
+  & [value="Message"] {
+    flex: 0 1 100%;
+  }
+  & button {
+    background: #606060;
+    color: #fff;
+    padding: .5em 2em;
+    font-weight: 100;
+    &:hover {
+      background: #808080;
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+  }
+}
