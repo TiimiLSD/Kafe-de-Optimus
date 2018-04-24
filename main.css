@@ -76,6 +76,9 @@ section.hero img {
   margin: 0 auto;
   display: block;
 }
+section:nth-last-of-type(1) {
+  margin-bottom: 2rem;
+}
 
 article {
   max-width: 80em;
@@ -209,11 +212,11 @@ article {
   background: #ededed;
 }
 .contact-form [value="Name"] {
-  flex: 1 0 calc(50% - 1em);
-  margin: auto 1em auto auto;
+  flex: 0 1 49%;
+  margin-right: 2%;
 }
 .contact-form [value="Email"] {
-  flex: 1 0 calc(50% - 1em);
+  flex: 0 1 49%;
 }
 .contact-form [value="Phone Number"] {
   flex: 0 1 100%;
@@ -231,4 +234,42 @@ article {
   background: #808080;
   cursor: pointer;
   transform: scale(1.05);
+}
+
+.business-card {
+  background: #ebebeb;
+  border-radius: .25em;
+  padding: 0 1.5em .5em 1.5em;
+  flex: 0 1 50%;
+  font-size: .75em;
+}
+.business-card + .business-card {
+  margin-left: 1.5em;
+}
+.business-card > p {
+  margin: .25em 0;
+}
+.business-card-container {
+  display: flex;
+  margin: 1em 0;
+}
+.business-card h1 {
+  font-weight: 400;
+  margin: .25em 0;
+}
+.business-card .container {
+  margin: .5em 0;
+}
+.business-card .container p, .business-card .container a {
+  display: inline;
+}
+.business-card .fa {
+  font-size: 2.5em;
+  width: 1em;
+  display: inline-block !important;
+  text-align: center;
+  margin: 0 .25em 0 0;
+}
+.business-card .fa-envelope {
+  transform: scale(0.75);
 }
