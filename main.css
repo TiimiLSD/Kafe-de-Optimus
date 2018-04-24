@@ -274,11 +274,61 @@ article {
   transform: scale(0.75);
 }
 
+/* ARTICLE BREAKPOINT */
+@media only screen and (max-width: 1280px) {
+  section article {
+    padding: 0 1em;
+    box-sizing: border-box;
+  }
+}
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+
+  nav {
+    font-size: .75em;
+  }
+}
+/* IPAD */
+@media only screen and (max-width: 768px) {
+  /* TEEN NAIST JARKEVAMPII JOS JAKSAN. */
+  body {
+    font-size: 12px;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .mobile-flex {
+    flex-flow: column wrap;
+  }
+
+  .business-card {
+    margin: 1em 0 !important;
+  }
+
+  .contact-form [value="Name"] {
+    margin-right: 0;
+  }
+
+  .contact-form button:hover {
+    transform: scale(1);
+  }
+}
+@media only screen and (max-width: 640px) {
+  body {
+    font-size: 10px;
+  }
+}
+/* SMARTPHONES LANDSCAPE */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .contact-form [value="Name"] {
-    flex: 0 1 100%;
+    flex: 1 0 100%;
   }
   .contact-form [value="Email"] {
-    flex: 0 1 100%;
+    flex: 1 0 100%;
   }
 }

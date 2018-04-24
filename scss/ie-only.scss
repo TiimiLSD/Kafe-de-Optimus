@@ -1,10 +1,10 @@
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .contact-form {
     & [value="Name"] {
-      flex: 0 1 100%;
+      flex: 1 0 100%;
     }
   & [value="Email"] {
-      flex: 0 1 100%;
+      flex: 1 0 100%;
     }
   }
 }
