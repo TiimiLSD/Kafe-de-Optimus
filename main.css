@@ -273,3 +273,12 @@ article {
 .business-card .fa-envelope {
   transform: scale(0.75);
 }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .contact-form [value="Name"] {
+    flex: 0 1 100%;
+  }
+  .contact-form [value="Email"] {
+    flex: 0 1 100%;
+  }
+}
