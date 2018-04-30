@@ -24,6 +24,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 h1 {
   font-size: 3.5em;
   font-weight: 100;
+  margin: 1em 0;
 }
 
 a {
@@ -57,12 +58,12 @@ b {
 
 section {
   width: 100%;
+  padding: 5rem 0 0 0;
   & article {
     margin: 0 auto;
     display: block;
   }
   &.hero {
-    padding: 5em 0 0 0;
     background: rgba(0, 0, 0, 0.75);
     overflow: hidden;
     position: relative;
@@ -85,7 +86,7 @@ section {
     }
   }
   &:nth-last-of-type(1) {
-    margin-bottom: 2rem;
+    min-height: calc(100vh - 5rem);
   }
 }
 

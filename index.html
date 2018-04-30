@@ -3,36 +3,50 @@
 <meta charset="utf-8">
 <head>
   <title>Kafé de Optimus</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- KAFÉ DE OPTIMUS FAVICON -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> <!-- JQUERY -->
   <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script> <!-- JQUERY.SCROLLTO -->
   <script src="https://cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script> <!-- JQUERY.LOCALSCROLL -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i" rel="stylesheet">
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script> <!-- JQUERY.LAZYLOAD -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i" rel="stylesheet"> <!-- OPEN SANS LIBRARY -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="main.css"> <!-- MAIN STYLE -->
 </head>
-<body class="loading">
+<body>
  <!-- ON READY -->
   <script>
-   $( document ).ready(function() {
-    $('body').removeClass('loading').addClass('ready');
+  $(document).ready(function() {
     $('#nav').localScroll({
       axis:'y',
     });                               
    });
   </script>
-  <!--LOADING SCREEN-->
-  <div id="loading">
-   <!--
-    <img src="https://media2.giphy.com/media/l3vR0PInsdNLXKWJi/giphy.gif">
-    <a target="_blank" href="https://giphy.com/gifs/animation-friends-coffee-l3vR0PInsdNLXKWJi">via GIPHY</a>
-    -->
-    LOADING...
-  </div>
+  
+  <script>
+  
+    $(window).bind("scroll", function() { 
+      var $sec1 = $('#hero').offset().top - 4;
+      var $sec2 = $('#coffees').offset().top - 4;
+      var $sec3 = $('#contact').offset().top - 6;   
+
+      if ($(this).scrollTop() > $sec1){ 
+        $("body").addClass('onHero').removeClass('onCoffees').removeClass('onContact');
+      }           
+      if ($(this).scrollTop() > $sec2){ 
+        $("body").addClass('onCoffees').removeClass('onHero').removeClass('onContact'); 
+      }  
+      if ($(this).scrollTop() > $sec3){ 
+        $("body").addClass('onContact').removeClass('onHero').removeClass('onCoffees'); 
+      } 
+      });
+  
+  </script>
+  
    <!-- NAVBAR -->
   <nav class="nav" id="nav">
-    <div class="nav-link-container hide-on-mobile">
-     <a href="#hero" class="nav-link">About Us</a>
+    <div class="nav-link-container hide-on-mobile scroll-links">
+     <div class="marker"></div>
+      <a href="#hero" class="nav-link">About Us</a>
       <a href="#coffees" class="nav-link">Coffees</a>
       <a href="#contact" class="nav-link">Contact Us</a>
     </div>
@@ -50,7 +64,7 @@
     </div>
   </nav>
   
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <section class="hero text-center" id="hero">
     
     <img class="logo" src="imgs/logo.png">
@@ -66,17 +80,14 @@
     </article>
     
   </section>
-  <!-- MUUTA PASKAA -->
-  <section class="text-center">
+  <!-- COFFEES -->
+  <section id="coffees">
+    <article>
+    <div class="text-center">
     <article>
       <h1>Check out our <b>coffees</b>.</h1>
     <p>Our cafe has 2 kinds of flavors original flavor and mint flavor, we also sell powder version of the original flavor.</p>
     </article>
-  </section>
-  <!-- KAHVI SEKTIO -->
-  <section id="coffees">
-    <article>
-    <div class="text-center">
      <h1><b>Cafe</b> products and information</h1>
       <p>Original flavor is our customers favorite cafe, mint is for some of our customers <i>“the go to cafe”</i> after trying it. Powder version is good for those who want quick and good quality <b>café</b>.</p>
       </div>
@@ -133,7 +144,7 @@
       <h1 class="text-center">What are you <b>waiting for</b> buy them <b>now</b>!</h1>
     </article>
   </section>
-  <!-- CONTACT US SEKTIO -->
+  <!-- CONTACT US -->
   <section id="contact">
     <article>
       <h1>Contact Us</h1>
