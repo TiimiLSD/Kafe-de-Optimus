@@ -25,16 +25,13 @@
   &-link {
     top: 5px;
     position: relative;
-    & svg {
+    & .svg {
       height: 1em;
       border-radius: .25em;
-      & path, circle {
-        fill: currentColor!important;
-      }
-    }
-    &:hover svg {
-      & path, circle {
-        //fill: currentColor!important;
+      filter: brightness(10);
+      transition: filter .25s;
+      &:hover {
+        filter: brightness(1);
       }
     }
   }

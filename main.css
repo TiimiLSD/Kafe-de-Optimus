@@ -119,12 +119,14 @@ article {
   top: 5px;
   position: relative;
 }
-.nav-link svg {
+.nav-link .svg {
   height: 1em;
   border-radius: .25em;
+  filter: brightness(10);
+  transition: filter .25s;
 }
-.nav-link svg path, .nav-link svg circle {
-  fill: currentColor !important;
+.nav-link .svg:hover {
+  filter: brightness(1);
 }
 
 .scroll-links {
