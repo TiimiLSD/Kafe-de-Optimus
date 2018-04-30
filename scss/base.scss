@@ -51,6 +51,10 @@ b {
     text-align: center;
   }
 
+.no-margin > * {
+  margin: 0;
+}
+
 section {
   width: 100%;
   & article {
