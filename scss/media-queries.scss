@@ -11,8 +11,11 @@
 
 /* TABLET LANDSCAPE / DESKTOP */
 @media only screen and (max-width: 1024px) {
-  body {
-    font-size: 14px;
+  h1 {
+    font-size: 3em;
+  }
+  p {
+    font-size: 1.5em;
   }
   nav {
     font-size: .75em;
@@ -22,8 +25,17 @@
 /* IPAD */
 @media only screen and (max-width: 768px) {
   /* TEEN NAIST JARKEVAMPII JOS JAKSAN. */
-  body {
-    font-size: 12px;
+  h1 {
+    font-size: 2.5em;
+  }
+  p {
+    font-size: 1.25em;
+  }
+  .product-card {
+    font-size: .88em;
+  }
+  .product-card-container {
+    flex: 1 0 100%;
   }
   .hide-on-mobile {
     display: none;
@@ -43,12 +55,30 @@
 }
 
 @media only screen and (max-width: 640px) {
-  body {
-    font-size: 10px;
+  h1 {
+    font-size: 2em;
+  }
+  p {
+    font-size: 1em;
+  }
+  .product-card {
+    font-size: .75em;
+    width: 100%;
+  }
+  .logo {
+    height: 15em;
   }
 }
 
 /* SMARTPHONES LANDSCAPE */
 @media only screen and (max-width: 480px) {
-  
+  .product-card {
+    font-size: .66em;
+    &-container {
+      flex: 1 0 100%;
+    }
+    &-desc {
+      flex: 1 0 100%;
+    }
+  }
 }

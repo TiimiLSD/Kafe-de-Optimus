@@ -47,18 +47,18 @@ b {
   }
 }
 
-section {
-  width: 100%;
-  &.text-center {
+.text-center {
     text-align: center;
   }
+
+section {
+  width: 100%;
   & article {
     margin: 0 auto;
     display: block;
   }
   &.hero {
-    max-height: 47em;
-    padding: 4em 0 0 0;
+    padding: 5em 0 0 0;
     background: rgba(0, 0, 0, 0.75);
     overflow: hidden;
     position: relative;

@@ -42,19 +42,19 @@ p b {
   font-weight: 600;
 }
 
+.text-center {
+  text-align: center;
+}
+
 section {
   width: 100%;
-}
-section.text-center {
-  text-align: center;
 }
 section article {
   margin: 0 auto;
   display: block;
 }
 section.hero {
-  max-height: 47em;
-  padding: 4em 0 0 0;
+  padding: 5em 0 0 0;
   background: rgba(0, 0, 0, 0.75);
   overflow: hidden;
   position: relative;
@@ -98,6 +98,8 @@ article {
 .nav-link-container {
   display: inline;
   float: left;
+  top: 8px;
+  position: relative;
 }
 .nav-link-container > * {
   display: inline;
@@ -107,6 +109,17 @@ article {
 }
 .nav-link-container a + a {
   margin-left: .25em;
+}
+.nav-link {
+  top: 5px;
+  position: relative;
+}
+.nav-link svg {
+  height: 1em;
+  border-radius: .25em;
+}
+.nav-link svg path, .nav-link svg circle {
+  fill: currentColor !important;
 }
 
 .product-card {
@@ -283,8 +296,12 @@ article {
 }
 /* TABLET LANDSCAPE / DESKTOP */
 @media only screen and (max-width: 1024px) {
-  body {
-    font-size: 14px;
+  h1 {
+    font-size: 3em;
+  }
+
+  p {
+    font-size: 1.5em;
   }
 
   nav {
@@ -294,8 +311,20 @@ article {
 /* IPAD */
 @media only screen and (max-width: 768px) {
   /* TEEN NAIST JARKEVAMPII JOS JAKSAN. */
-  body {
-    font-size: 12px;
+  h1 {
+    font-size: 2.5em;
+  }
+
+  p {
+    font-size: 1.25em;
+  }
+
+  .product-card {
+    font-size: .88em;
+  }
+
+  .product-card-container {
+    flex: 1 0 100%;
   }
 
   .hide-on-mobile {
@@ -319,11 +348,35 @@ article {
   }
 }
 @media only screen and (max-width: 640px) {
-  body {
-    font-size: 10px;
+  h1 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .product-card {
+    font-size: .75em;
+    width: 100%;
+  }
+
+  .logo {
+    height: 15em;
   }
 }
 /* SMARTPHONES LANDSCAPE */
+@media only screen and (max-width: 480px) {
+  .product-card {
+    font-size: .66em;
+  }
+  .product-card-container {
+    flex: 1 0 100%;
+  }
+  .product-card-desc {
+    flex: 1 0 100%;
+  }
+}
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .contact-form [value="Name"] {
     flex: 1 0 100%;
