@@ -291,6 +291,19 @@ article {
   transform: scale(0.75);
 }
 
+body.loading #loading {
+  display: block;
+}
+
+#loading {
+  display: none;
+  height: 100%;
+  width: 100%;
+  background: #e2c16e;
+  z-index: 999;
+  position: absolute;
+}
+
 /* ARTICLE BREAKPOINT */
 @media only screen and (max-width: 1280px) {
   section article {
