@@ -9,6 +9,8 @@
   display: flex;
   flex-flow: row wrap;
   align-content: space-around;
+  position: relative;
+  overflow: hidden;
   &-container {
     flex: 1 0 50%;
     &:nth-of-type(1){
@@ -59,6 +61,29 @@
       }
     }
   }
+  &-price {
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    font-family: 'Open Sans';
+    font-weight: 100;
+    font-size: 2em;
+    color:white;
+    z-index:1;
+    &:before {
+      content: '';
+      height: 2em;
+      width: 6em;
+      background: rgba(0, 0, 0, 0.25);
+      display: block;
+      position: absolute;
+      top: -.75em;
+      right: -1.75em;
+      z-index: -1;
+      transform: rotate(35deg);
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+    }
+  }
   & h1 {
     margin: 0;
   }
@@ -72,7 +97,7 @@
   &#green {
     background: $BG_GREEN;
   }
-  &#original {
+  &#powder {
     background: $BG_ORIGINAL;
   }
 }
